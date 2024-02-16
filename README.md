@@ -129,6 +129,12 @@ For proof generation, execute the following command to track memory usage:
 ![Screenshot Description](readme_files/Option3.png)
 ### 4. Measure Assigner Execution Time:
 ![Screenshot Description](readme_files/Option4.png)
+### 5. Measure Proof Generation Execution Time:
+![Screenshot Description](readme_files/Option5.png)
+### 6. Display Results:
+![Screenshot Description](readme_files/Option6.png)
+### 7. Exit:
+
 
 ## Error Handling
 Understanding and resolving common errors can significantly improve your experience with the benchmarking tool. Here are some of the most frequent issues you might encounter, along with advice on how to address them:
@@ -172,10 +178,10 @@ Enter your choice (1-7): 6
 
 While the following benchmarking script provides a solid foundation for evaluating zk-SNARK compilation and proof generation, several areas can be enhanced to improve usability and functionality:
 
-- **Parallel Execution**: Implementing parallel processing for independent tasks could significantly reduce the overall benchmarking time.
-- **User Interface Enhancement**: Incorporating a graphical user interface (GUI) or a more interactive command-line interface could make the tool more accessible to users unfamiliar with command-line operations.
-- **Extended Error Handling and Validation**: Adding more comprehensive error checks and validations for user inputs and system configurations can prevent common pitfalls and guide users more effectively.
-- **Customization and Configuration Options**: Allowing users to customize benchmark parameters and configurations through a configuration file or command-line arguments could cater to advanced use cases.
+- **Parallel Execution** - Implementing parallel processing for independent tasks could significantly reduce the overall benchmarking time.
+- **User Interface Enhancement** - Incorporating a graphical user interface (GUI) or a more interactive command-line interface could make the tool more accessible to users unfamiliar with command-line operations.
+- **Extended Error Handling and Validation** - Adding more comprehensive error checks and validations for user inputs and system configurations can prevent common pitfalls and guide users more effectively.
+- **Customization and Configuration Options** - Allowing users to customize benchmark parameters and configurations through a configuration file or command-line arguments could cater to advanced use cases.
 
 ## Notes
 
@@ -185,7 +191,7 @@ While the following benchmarking script provides a solid foundation for evaluati
 
 ## Considerations
 
-- **System Load**: Running other applications and processes on the benchmarking system can influence the performance metrics captured. For the most accurate results, minimize background processes during benchmarking.
-- **Path Dependencies**: The correct functioning of the tool heavily relies on the accurate specification of paths to the `zkllvm-template` and its related files. Ensure paths are correctly set to avoid errors.
-- **Version Compatibility**: The tool has been developed and tested with specific versions of dependencies (e.g., Python 3.10+). Using significantly different versions may lead to unexpected results or errors.
-- **Security Implications**: Running benchmarking tools, especially those executing commands and scripts, carries inherent security risks. Always verify the source code and understand the actions performed by the tool before execution.
+- **System Load** - Running other applications and processes on the benchmarking system can influence the performance metrics captured. For the most accurate results, minimize background processes during benchmarking.
+- **Path Dependencies** - The correct functioning of the tool heavily relies on the accurate specification of paths to the `zkllvm-template` and its related files. Ensure paths are correctly set to avoid errors.
+- **Version Compatibility** - The tool has been developed and tested with specific versions of dependencies (e.g., Python 3.10+). Using significantly different versions may lead to unexpected results or errors.
+- **Security Implications** - Running benchmarking tools, especially those executing commands and scripts, carries inherent security risks. Always verify the source code and understand the actions performed by the tool before execution.
