@@ -164,8 +164,8 @@ class BenchmarkTool:
         """
         Measure the heap allocation of the assigner using Valgrind.
         """
-        valgrind_command = f"valgrind --massif-out-file=assigner_memory_bench --tool=massif assigner -b {self.build_src}/template.ll -p {self.input_json} -c {self.build_src}/template.crct -t {self.build_src}/template.tbl -e pallas"
-        return self.run_command(valgrind_command, cwd=self.current_dir_path)
+        assigner_gen_command = f"valgrind --massif-out-file=assigner_memory_bench --tool=massif assigner -b {self.build_src}/template.ll -p {self.input_json} -c {self.build_src}/template.crct -t {self.build_src}/template.tbl -e pallas"
+        return self.run_command(assigner_gen_command, cwd=self.current_dir_path)
 
     def measure_proof_generation_heap_allocation(self):
         """
@@ -178,8 +178,8 @@ class BenchmarkTool:
         """
         Measure the execution time of the assigner using the 'time' command.
         """
-        proof_gen_command = f"time assigner -b {self.build_src}/template.ll -p {self.input_json} -c {self.build_src}/template.crct -t {self.build_src}/template.tbl -e pallas"
-        return self.run_command(proof_gen_command, cwd=self.current_dir_path)
+        assigner_gen_command = f"time assigner -b {self.build_src}/template.ll -p {self.input_json} -c {self.build_src}/template.crct -t {self.build_src}/template.tbl -e pallas"
+        return self.run_command(assigner_gen_command, cwd=self.current_dir_path)
 
     def measure_proof_generation_execution_time(self):
         """
