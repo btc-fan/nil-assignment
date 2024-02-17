@@ -32,33 +32,31 @@ Example:
 python benchmark_script.py --zkllvm-template-path="../zkllvm-template"
 ```
 Upon successful launch, the tool presents an interactive menu with various benchmarking operations:
-{
-
-"Benchmark Tool Menu":
-1. "Verify Build"
-2. "Measure Assigner Heap Allocation"
-3. "Measure Proof Generation Heap Allocation"
-4. "Measure Assigner Execution Time"
-5. "Measure Proof Generation Execution Time"
-6. "Display Results"
-7. "Exit"
-
-}
+```
+Benchmark Tool Menu:
+1. Verify Build
+2. Measure Assigner Heap Allocation
+3. Measure Proof Generation Heap Allocation
+4. Measure Assigner Execution Time
+5. Measure Proof Generation Execution Time
+6. Display Results
+7. Exit
+```
 ### Displaying Results
 To view benchmark results, initiate options **2** through **5** from the menu to accumulate necessary data. These options correspond to distinct measurements, gathering four pivotal indicators: memory usage and execution time for both the assigner and proof generator.
 
 ### Example:
-"Enter your choice (1-7):" 6
+Enter your choice (1-7): 6
 
 
 
-"2024-02-16 20:32:23,536 - INFO: Printing Benchmark Details:"
-1. "Assigner:"<br>
-   "Memory: 17.60GB,"<br>
-   "Time: 0.12s"<br>
-2. "Proof:"<br>
-   "Memory: 0.03GB,"<br>
-   "Time: 0.15s"<br><br>
+2024-02-16 20:32:23,536 - INFO: Printing Benchmark Details:
+1. Assigner:<br>
+   Memory: 17.60GB,<br>
+   Time: 0.12s<br>
+2. Proof:<br>
+   Memory: 0.03GB,<br>
+   Time: 0.15s<br><br>
 
 - **Memory** metrics are compiled from heap memory measurements, parsed using regex in a pandas table, with sums calculated from the total(B) column and converted to GB.
 ### Example of sum for all measured tables:
@@ -79,7 +77,7 @@ sys     0m0.000s
 ## Manual Benchmarking Process
 To manually reproduce the benchmarking process, follow the commands outlined below, executed within the `zkllvm-template` repository. This process allows for detailed analysis of both memory allocation and execution time for the assigner and proof generation phases.
 
-### Assigner Benchmarking
+### Assigner Benchmarking:
 
 1. **Memory Benchmarking with Valgrind:**
    Run the following command to measure heap allocation for the assigner:
@@ -97,7 +95,7 @@ To manually reproduce the benchmarking process, follow the commands outlined bel
     time assigner -b build/src/template.ll -p ./src/main-input.json -t build/src/template.tbl -c build/src/template.crct -e pallas   
     ```
 
-## Proof Generation Benchmarking
+### Proof Generation Benchmarking:
 
 1. **Memory Benchmarking with Valgrind:**
 For proof generation, execute the following command to track memory usage:
@@ -119,7 +117,7 @@ For proof generation, execute the following command to track memory usage:
     This command generates a proof file named **proof.bin**.
 
 ## Execution Screenshots
-###Main Menu:
+### Main Menu:
 ![Screenshot Description](readme_files/main_menu.png)
 ### 1. Verify Build:
 ![Screenshot Description](readme_files/Option1.png)
@@ -160,7 +158,7 @@ benchmark_script.py: error: unrecognized arguments: test1
 **Solution:** Make sure to include the --zkllvm-template-path argument followed by the correct path to the zkllvm-template directory when running the script. Review the command syntax to ensure it matches the expected format.
 
 
-### Viewing Benchmark Results Without Execution
+### "Viewing Benchmark Results Without Execution"
 Trying to display benchmark results without first executing the benchmarking commands properly will lead to an error indicating incomplete results:
 
 ```plaintext
